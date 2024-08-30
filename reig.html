@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<meta charset="utf-8"
+<html>
+    <style>
+    
+      
+        .main-house{
+    width: 100%;
+    height: 100vh;
+    background-image: url(jcpm.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    }
+    .jesus{
+        text-align: center;
+        color: white;
+    }
+    .name h1{
+        text-align: center;
+        columns: brown;
+    }
+    #form {
+        text-align: center;
+        background-color: wheat;
+        text-decoration: dotted;
+        text-transform: uppercase;
+    }
+    .login_form #name,
+    .login_form #locate,
+    .login_form #gmaili,
+    .login_form #lost,
+    .login_form #number{
+        margin-top: 5px;
+        width: 345px;
+        font-size: 18px;
+        color: red;
+        background-color: blue;
+        text-align: center;
+        padding: 5px 8px;
+        border-radius: 3px;
+        border: 1px solid;
+        display: none;
+    }
+    </style>
+    <script>
+         //Validation Code For Inputs
+
+ var FULLNAME = document.forms['form']['FULLNAME'];
+ var LOCATION = document.forms['form']['LOCATION'];
+ var GMAIL = document.forms['form']['GMAIL'];
+ var PASSWORD = document.forms['form']['PASSWORD'];
+ var PHONENO = document.forms['form']['PHONENO'];
+
+var login_form = document.getElementById('full');
+var login_form = document.getElementById('locate');
+var login_form = document.getElementById('gmail');
+var login_form = document.getElementById('pass');
+var login_form = document.getElementById('mobile');
+
+FULLNAME.addEventListener('textInput', FULLNAME_verify);
+LOCATION.addEventListener('textInput', LOCATION_verify);
+GMAIL.addEventListener('textInput', GMAIL_verify);
+PASSWORD.addEventListener('textInput', PASSWORD_verify);
+PHONENO.addEventListener('textInput', PHONENO_verify);
+
+function validated(){
+    if (FULLNAME.value.length < 9){
+        FULLNAME.style.border = "1px solid red";
+        FULLNAME.focus();
+        return false;
+    }
+}
+
+function validated(){
+   if (LOCATION.value.length < 9){
+       LOCATION.style.border = "1px solid red";
+       LOCATION.focus();
+       return false;
+   }
+}
+
+function validated(){
+   if (GMAIL.value.length < 9){
+       GMAIL.style.border = "1px solid red";
+       GMAIL.focus();
+       return false;
+   }
+}
+
+function validated(){
+   if (PASSWORD.value.length < 9){
+       PASSWORD.style.border = "1px solid red";
+       PASSWORD.focus();
+       return false;
+   }
+}
+
+function validated(){
+   if (PHONENO.value.length < 9){
+       PHONENO.style.border = "1px solid red";
+       PHONENO.focus();
+       return false;
+   }
+}
+function FULLNAME_verify(){
+   if (FULLNAME.value.length>= 8) {
+      FULLNAME.style.border = "1px solid silver";
+      return true;
+   }
+}
+
+function LOCATION_verify(){
+   if (LOCATION.value.length>= 8) {
+      LOCATION.style.border = "1px solid silver";
+      return true;
+   }
+}
+function GMAIL_verify(){
+   if (GMAIL.value.length>= 8) {
+      GMAIL.style.border = "1px solid silver";
+      return true;
+   }
+}
+function PASSWORD_verify(){
+   if (PASSWORD.value.length>= 8) {
+      PASSWORD.style.border = "1px solid silver";
+      return true;
+   }
+}
+function PHONENO_verify(){
+   if (PHONENO.value.length>= 8) {
+      PHONENO.style.border = "1px solid silver";
+      return true;
+   }
+}
+    </script>
+    <body>
+        <!--category-->
+        <div class="name">
+            <h1>MEMBER FORM</h1>
+        </div>
+        <section class="main-house">
+         <div class="jesus">
+            <h2>ISIAH 49VS 25<br></br>Thus saith the lord even the capttives of the mighty shall be takenaway<br></br>the pray of the teribble shall be delivered<br></br>for i will contend with he that contend with you<br></br>i will save thy children</h2>
+         </div>
+        </section>
+
+          <!--form-->
+   <div id="form">
+    <form class="login_form" action="joshua.html"  method="post" name="form" > 
+        <label>FULLNAME:</label>
+        <input type="text" id="full" name="full" placeholder="fullname">
+        <div id="name">please fill up your fullname</div>
+        <label>LOCATION:</label>
+        <input type="location" id="state" name="locate" placeholder="location"><br></br>
+        <div id="locate">please fill up your location</div>
+        <label>GMAIL:</label>
+        <input type="text" id="gmail" name="gmail" placeholder="gmail.com">
+        <div id="gmaili">please fill up your gmail</div>
+        <label>PASSWORD:</label>
+        <input type="password" id="pass" name="jesus" placeholder="password"><br></br>
+        <div id="lost">please fill up your password</div>
+        <label>PHONENO</label>
+        <input type="text" id="mobile" name="mobile" placeholder="+234 81476 60977">
+        <div id="number">please fill up your number</div>
+            <button class="main-btn">submit</button>
+        
+    </form>
+    </body>
+    </script>
+</html>
